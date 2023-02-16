@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Validation</h2>
+
+<p>Please input a number :</p>
+
+<input id="numb">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="demo"></p>
+
+
+
+
+
+
+<script>
+	function myFunction()
+	{
+var text="";
+		var rem, temp, final = 0;
+		var number = Number(document.getElementById("numb").value);
+
+		temp = number;
+		while(number>0)
+		{
+			rem = number%10;
+			number = parseInt(number/10);
+			final = final*10+rem;
+		}
+		if(final==temp)
+		{
+			text="The inputed number is Palindrome";
+		}
+		else
+		{
+			text="The inputted number is not palindrome";
+		}
+
+  document.getElementById("demo").innerHTML = text;
+	}
+</script>
+  
+  
+  
+
+</body>
+</html> 
